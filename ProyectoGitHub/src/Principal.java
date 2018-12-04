@@ -170,6 +170,8 @@ public class Principal {
 			case 25:
 				break;
 			case 26:
+				ejercicio26();
+				
 				break;
 			
 			case 30:
@@ -190,5 +192,35 @@ public class Principal {
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+	public static void ejercicio26()
+	{
+		int contador=0;															/*En estas lineas Iniciamos las variables*/
+		boolean sicierto=false;
+		String cadena=" ";
+		Scanner kb=new Scanner (System.in);
+		
+		System.out.println("Inserte una frase");								/*Aqui pedimos que inserte una cadena y la guardamos en la string cadena */
+		cadena=kb.nextLine();
+		
+		char [] array=new char [cadena.length()];								/*Inicializamos la array de char tan larga como sea la cadena*/
+		
+		for(contador=0;contador<cadena.length();contador++) 					/*Aqui nos metemos en un bucle, hasta que contador sea menor que la longitud de la cadena */
+		{
+			array[contador]=cadena.charAt(contador);							/*Aqui insertamos en el array caracter a caracter*/
+			System.out.print(cadena.charAt(contador)+" = "+array[contador]+" :");
+			
+			sicierto=array[contador]==cadena.charAt(contador);					/*Aqui hacemos una comparacion para ver si son iguales o no*/
+			
+			if(sicierto)														/*Si es cierto al lado de cada letra aparecera que coinciden*/
+			{
+				System.out.println("Coinciden");
+			}
+			else 																/*Si no dira que no coinciden*/
+			{
+				System.out.println("No coincide");
+			}
+			
+		}
+	}
 	
 }
