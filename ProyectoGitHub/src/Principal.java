@@ -67,6 +67,7 @@ public class Principal {
 	public static void MostrarMenu() 	{
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
+		System.out.println("12.- Ejercicio12 (Carlos Mota)");
 		System.out.println("30.- Salir");
 	}
 	
@@ -142,6 +143,7 @@ public class Principal {
 			case 11:
 				break;
 			case 12:
+				ejercicio12();
 				break;
 			case 13:
 				break;
@@ -192,6 +194,29 @@ public class Principal {
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+	
+	public static void ejercicio12() {
+
+		//Vectores
+
+		//Array "original"
+		int[] arrayOriginal = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+
+		//Aray "copia"
+		int[] arrayCopia = new int[10];
+
+		System.out.print("arrayCopia = ");
+
+		// Asignamos valores y los imprimimos (comprobamos que se está realizando correctamente la copia).
+		for (int i = 0; i < arrayCopia.length; i++) {
+
+		    arrayCopia[i] = arrayOriginal[i];
+		    System.out.print(arrayCopia[i] + " ");
+
+		}
+
+    	}
+	
 	public static void ejercicio26()
 	{
 		int contador=0;															/*En estas lineas Iniciamos las variables*/
