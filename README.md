@@ -7,6 +7,6 @@ Profesor: Camilo JC
 Alumno: Jaime Balaguer
 
 Ejercicio12: Carlos Mota Sánchez
+Alumno:Sergi Santamaria Sendra
 Ejercicio16: Javier Juan Uceda
 Ejercicio 22: Sergi Cortés
-
