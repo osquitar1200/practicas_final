@@ -7,3 +7,4 @@ Profesor: Camilo JC
 Alumno: Jaime Balaguer
 
 Ejercicio12: Carlos Mota Sánchez
+Ejercicio16: Javier Juan Uceda

@@ -137,7 +137,7 @@ public class Principal {
 			break;
 		case 15:
 			break;
-		case 16:
+		case 16:ejercicio16();
 			break;
 		case 17:
 			break;
@@ -174,6 +174,8 @@ public class Principal {
 		return correcto;
 	}
 
+	
+
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
@@ -198,6 +200,29 @@ public class Principal {
 		}
 
     }
+	
+	
+	private static void ejercicio16() {
+		int[][] arrayC = {{1,2},{3,4},{5,6}};
+		int contadorfilas=0;
+		int contadorcolumnas=0;
+		/*
+		* Bucle que va recorriendo las filas
+		*/
+		for (contadorfilas=0;contadorfilas<arrayC.length;contadorfilas++) {
+			/*
+			* Bucle que imprime el array.
+			*/
+			for (contadorcolumnas=0;contadorcolumnas<arrayC[0].length;contadorcolumnas++) {
+				System.out.print(arrayC[contadorfilas][contadorcolumnas]);
+			}	
+		}
+		
+	}
+
+
+		
+	
   
   public static void ejercicio09() {
 		int i = 1;
