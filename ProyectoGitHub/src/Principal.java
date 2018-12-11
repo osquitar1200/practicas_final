@@ -136,7 +136,8 @@ public class Principal {
 			break;
 		case 15:
 			break;
-		case 16:ejercicio16();
+		case 16:
+			ejercicio16();
 			break;
 		case 17:
 			break;
@@ -202,27 +203,24 @@ public class Principal {
 
     }
 	
-	
-	private static void ejercicio16() {
-		int[][] arrayC = {{1,2},{3,4},{5,6}};
-		int contadorfilas=0;
-		int contadorcolumnas=0;
-		/*
-		* Bucle que va recorriendo las filas
-		*/
-		for (contadorfilas=0;contadorfilas<arrayC.length;contadorfilas++) {
-			/*
-			* Bucle que imprime el array.
-			*/
-			for (contadorcolumnas=0;contadorcolumnas<arrayC[0].length;contadorcolumnas++) {
-				System.out.print(arrayC[contadorfilas][contadorcolumnas]);
-			}	
+	/* Ejercicio 16, Tema 4, Alejandro Rozas */
+	public static void ejercicio16() {
+
+		double[][] tabla = { { 1.0, 2.0, 3.0, 4.0 }, { 5.0, 6.0, 7.0, 8.0 }, { 9.0, 10.0, 11.0, 12.0 },
+				{ 13.0, 14.0, 15.0, 16.0 } }; // Array bidimensional con numeros reales
+												// Ya introducidos
+
+		// Este for pasara valor a valor todos los valores de el Array
+		for (int fila = 0; fila < tabla.length; fila++) {
+			for (int columna = 0; columna < tabla[fila].length; columna++) {
+				System.out.print(tabla[fila][columna] + "\t"); // Imprimira cada valor del array si se cumplen las
+																// condiciones
+
+			}
+			System.out.println("");
 		}
-		
 	}
 
-
-		
 	
   
   public static void ejercicio09() {
