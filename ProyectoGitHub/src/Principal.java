@@ -146,6 +146,7 @@ public class Principal {
 		case 19:
 			break;
 		case 20:
+			ejercicio20();
 			break;
 		case 21:
 			break;
