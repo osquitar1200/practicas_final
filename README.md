@@ -6,5 +6,7 @@ Ejercicios Tema 4
 Profesor: Camilo JC
 Alumno: Jaime Balaguer
 
-Ejercicio 12: Carlos Mota Sánchez
+Ejercicio12: Carlos Mota Sánchez
+Ejercicio16: Javier Juan Uceda
 Ejercicio 22: Sergi Cortés
+
