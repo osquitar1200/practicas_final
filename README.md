@@ -9,5 +9,6 @@ Alumno: Jaime Balaguer
 Ejercicio12: Carlos Mota Sánchez
 Alumno:Sergi Santamaria Sendra
 Ejercicio 16: Alejandro Rozas Martos
+Ejercicio 17: David Gabaldón Pardo
 Ejercicio 22: Sergi Cortés
 Ejercicio 20: Rafael Jorge Carbonell Gisbert
