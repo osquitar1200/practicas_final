@@ -134,7 +134,8 @@ public class Principal {
 			break;
 		case 13:
 			break;
-		case 14:
+		case 14: 
+        ejercicio14();
 			break;
 		case 15:
 			break;
@@ -335,6 +336,40 @@ public class Principal {
 		System.out.print("media: " + media + "nota mas alta" + notamayor);
 
 	}
+
+
+    public static void ejercicio14() {
+
+         int [] A = {30,15,2,21,44,8,4,23,60,75};
+		 
+		 int i=0, k=0, buscapeque=0, pospeque=0, aux=0;
+		 
+		 for(i=0;i<A.length;i++) { //Bucle que recorre el array hasta el final
+			 
+			 k=A[i];//Guardamos el mínimo
+			 pospeque=i;// y su posición 
+			 
+			 for(buscapeque=i;buscapeque<A.length;buscapeque++) { //Bucle que recorre el array 
+				 
+				 if(k>A[buscapeque]) { //Condición para cambiar
+					 
+					 k=A[buscapeque];
+					 pospeque=buscapeque;
+				 }
+			 }
+			 /**
+			  * Intercambio de variables
+			  */
+			 aux = A[pospeque];
+			 A[pospeque] = A[i];
+			 A[i] = aux;
+		 }
+		 for (i=0;i<A.length;i++) { //Imprimimos el array
+			 
+			 System.out.print(A[i] + " ");
+		 }
+
+    }
 
 	/**
 	 * Ejercicio 22 del Tema 4 - Sergi Cortés

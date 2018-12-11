@@ -5,6 +5,7 @@ Ejercicios Tema 4
 
 Profesor: Camilo JC
 Alumno: Jaime Balaguer
+Alumno: Javier Soler Cantó
 
 Ejercicio12: Carlos Mota Sánchez
 Alumno:Sergi Santamaria Sendra
