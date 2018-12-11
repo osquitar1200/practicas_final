@@ -60,6 +60,7 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
+		System.out.println("12.- Ejercicio12 (Carlos Mota)");
 		System.out.println("30.- Salir");
 	}
 
@@ -128,6 +129,7 @@ public class Principal {
 		case 11:
 			break;
 		case 12:
+        ejercicio12();
 			break;
 		case 13:
 			break;
@@ -157,7 +159,6 @@ public class Principal {
 			break;
 		case 26:
 			ejercicio26();
-
 			break;
 
 		case 30:
@@ -176,7 +177,29 @@ public class Principal {
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
-	public static void ejercicio09() {
+	public static void ejercicio12() {
+
+		//Vectores
+
+		//Array "original"
+		int[] arrayOriginal = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+
+		//Aray "copia"
+		int[] arrayCopia = new int[10];
+
+		System.out.print("arrayCopia = ");
+
+		// Asignamos valores y los imprimimos (comprobamos que se está realizando correctamente la copia).
+		for (int i = 0; i < arrayCopia.length; i++) {
+
+		    arrayCopia[i] = arrayOriginal[i];
+		    System.out.print(arrayCopia[i] + " ");
+
+		}
+
+    }
+  
+  public static void ejercicio09() {
 		int i = 1;
 		int num = 0;
 		int notas = 0;
@@ -222,22 +245,20 @@ public class Principal {
 
 	}
 
-	public static void ejercicio26() {
-		int contador = 0; /* En estas lineas Iniciamos las variables */
-		boolean sicierto = false;
-		String cadena = " ";
-		Scanner kb = new Scanner(System.in);
-
-		System.out.println(
-				"Inserte una frase"); /* Aqui pedimos que inserte una cadena y la guardamos en la string cadena */
-		cadena = kb.nextLine();
-
-		char[] array = new char[cadena.length()]; /* Inicializamos la array de char tan larga como sea la cadena */
-
-		for (contador = 0; contador < cadena.length(); contador++) /*
-																	 * Aqui nos metemos en un bucle, hasta que contador
-																	 * sea menor que la longitud de la cadena
-																	 */
+	
+	public static void ejercicio26()
+	{
+		int contador=0;															/*En estas lineas Iniciamos las variables*/
+		boolean sicierto=false;
+		String cadena=" ";
+		Scanner kb=new Scanner (System.in);
+		
+		System.out.println("Inserte una frase");								/*Aqui pedimos que inserte una cadena y la guardamos en la string cadena */
+		cadena=kb.nextLine();
+		
+		char [] array=new char [cadena.length()];								/*Inicializamos la array de char tan larga como sea la cadena*/
+		
+		for(contador=0;contador<cadena.length();contador++) 					/*Aqui nos metemos en un bucle, hasta que contador sea menor que la longitud de la cadena */
 		{
 			array[contador] = cadena.charAt(contador); /* Aqui insertamos en el array caracter a caracter */
 			System.out.print(cadena.charAt(contador) + " = " + array[contador] + " :");
