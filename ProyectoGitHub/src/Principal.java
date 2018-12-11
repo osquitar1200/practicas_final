@@ -1,4 +1,3 @@
-
 /** 
  * Ejercicio GitHub del tema 3
  * 
@@ -60,7 +59,9 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
+        System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
+		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
 
@@ -120,24 +121,26 @@ public class Principal {
 			break;
 		case 8:
 			break;
-		case 9: ejercicio09();
+		case 9: 
+			ejercicio09();
 			break;
 		case 10:
 			break;
 		case 11:
-			break;
-		case 11:
+            ejercicio11();
 			break;
 		case 12:
-        ejercicio12();
+			ejercicio12();
 			break;
 		case 13:
 			break;
-		case 14: ejercicio14();
+		case 14: 
+        ejercicio14();
 			break;
 		case 15:
 			break;
 		case 16:
+			ejercicio16();
 			break;
 		case 17:
 			break;
@@ -146,14 +149,17 @@ public class Principal {
 		case 19:
 			break;
 		case 20:
+			ejercicio20();
 			break;
 		case 21:
 			break;
 		case 22:
+			ejercicio22();
 			break;
 		case 23:
 			break;
 		case 24:
+			ejercicio24();
 			break;
 		case 25:
 			break;
@@ -174,9 +180,75 @@ public class Principal {
 		return correcto;
 	}
 
+	
+
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+    
+    /*
+    *
+    * Carlos Moles Valdivieso
+    */
+    public static void ejercicio11() {
+        
+		int cont = 0;
+		int suspendido = 0;
+		int aprobado = 0;
+		int notable = 0;
+		int excelente = 0;
+		
+		double [] Notas = {4.5,7.9,2.4,6.7,9.9,4.9,6.5,8,4,3,7,5};
+		
+    /*
+    * El siguiente bucle lee el array con las notas y va añadiendo contadores a la sección que corresponda la nota
+    */
+		for ( cont = 0; cont < Notas.length; cont ++) {
+			if ((Notas[cont] >= 0) && (Notas[cont] < 5)) {
+				suspendido = suspendido +1;
+			}
+			else if ((Notas[cont] >= 5) && (Notas[cont] < 7)) {
+				aprobado = aprobado +1;
+			}
+			else if ((Notas[cont] >= 7) && (Notas[cont] < 9)) {
+				notable = notable +1;
+			}
+			else if ((Notas[cont] >= 9) && (Notas[cont] <= 10)) {
+				excelente = excelente +1;
+			}
+			else System.out.println(Notas[cont]+ " No es una nota valida");
+		}
+    /*
+    * En los siguientes bucles se imprime cada seccion de notas con el numero de personas en cada sección  (añade un * por contador)		
+    */
+		System.out.println("Grafico de barras de las notas \n");
+		System.out.print("Suspendidos: ");
+		
+		for (cont = 0; cont < suspendido; cont ++) {
+			System.out.print("*");
+		}
+		
+		System.out.println();
+		System.out.print("Aprobados: ");
+		
+		for (cont = 0; cont < aprobado; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		System.out.print("Notables: ");
+		
+		for (cont = 0; cont < notable; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		System.out.print("Excelentes: ");
+		
+		for (cont = 0; cont < excelente; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+
 	public static void ejercicio12() {
 
 		//Vectores
@@ -198,6 +270,26 @@ public class Principal {
 		}
 
     }
+	
+	/* Ejercicio 16, Tema 4, Alejandro Rozas */
+	public static void ejercicio16() {
+
+		double[][] tabla = { { 1.0, 2.0, 3.0, 4.0 }, { 5.0, 6.0, 7.0, 8.0 }, { 9.0, 10.0, 11.0, 12.0 },
+				{ 13.0, 14.0, 15.0, 16.0 } }; // Array bidimensional con numeros reales
+												// Ya introducidos
+
+		// Este for pasara valor a valor todos los valores de el Array
+		for (int fila = 0; fila < tabla.length; fila++) {
+			for (int columna = 0; columna < tabla[fila].length; columna++) {
+				System.out.print(tabla[fila][columna] + "\t"); // Imprimira cada valor del array si se cumplen las
+																// condiciones
+
+			}
+			System.out.println("");
+		}
+	}
+
+	
   
   public static void ejercicio09() {
 		int i = 1;
@@ -245,6 +337,7 @@ public class Principal {
 
 	}
 
+
     public static void ejercicio14() {
 
          int [] A = {30,15,2,21,44,8,4,23,60,75};
@@ -278,6 +371,38 @@ public class Principal {
 
     }
 
+	/**
+	 * Ejercicio 22 del Tema 4 - Sergi Cortés
+	 */
+	public static void ejercicio22()
+	{
+		/* Variables */
+		int posiPrimero=0;														// Primera Posición del caracter
+		int posiUltimo=0;														// Ultima Posición del caracter
+		char caBusca=' ';														// Caracter a buscar
+		String cadena="";														// Frase
+		Scanner input=new Scanner (System.in);
+		
+		System.out.println("Introduce un texto (Puede contener espacios)");
+		cadena=input.nextLine();												// Usuario Introduce texto
+		
+		System.out.print("Caracter a buscar: ");
+		caBusca=input.next().charAt(0);											// Usuario Introduce caracter a buscar
+		
+		/* Si el caracter existe continua */
+		if(cadena.indexOf(caBusca)!=-1)
+		{
+			posiPrimero=cadena.indexOf(caBusca);								// Busca el primer "indice" del caracter que le pasemos
+			System.out.println("La primera posicion: "+posiPrimero);
+			
+			posiUltimo=cadena.lastIndexOf(caBusca);								// Busca el ultimo "indice" del caracter que le pasemos
+			System.out.println("La Ultima posición: "+posiUltimo);
+		}
+		
+		/* Si no existe se imprime un mensaje al respecto */
+		else
+			System.out.println("No existe este caracter en la frase.");
+	}
 	
 	public static void ejercicio26()
 	{
@@ -309,5 +434,92 @@ public class Principal {
 
 		}
 	}
+	public static void ejercicio24(){
+		/*
+		 * declaramos las variables
+		 */
+		String[] cadena = {"wz","ap","wx", "ac"}; 
+		int cont = 0;
+		int cont2 = 0;
+		String aux = "a";
+		
+		/*
+		 * En este bucle for iremos augmentando el contador "cont" que nos servira
+		 *  para cojer las posiciones de los valores a comparar
+		 */
+		for (cont = 1; cont < cadena.length; cont++) { 
+			/*
+			 *En este bucle for iremos augmentando el contador "cont2" que nos
+			 * servira para cojer las posiciones de comparacion
+			 */
+			for (cont2 = cont; cont2 > 0; cont2--) {				
+				
+				/*
+				 *  En este if comprovamos si la comparacion es negativa,en caso 
+				 *  de serlo cambiaremos los valores de posicion
+				 */
+				if (cadena[cont2].compareTo(cadena[cont2-1]) < 0) {
+					
+					/*
+					 * Utilizamos la variable aux para almacenar el valor de la cadena "pos x+1"
+					 */
+					aux = cadena[cont2]; 	
+					/*
+					 *  Cambiamos el valor de la cadena para cambiar el orden "pos x+1" por "pos x"
+					 */
+					cadena[cont2] = cadena[cont2-1];
+					/*
+					 * Volvemos a cambiar el valor de la cadena para dejarlo ya ordenado "pos x" = al valor de "aux"
+					 */
+					cadena[cont2-1] = aux; 							
+				}
 
+			}
+
+		}
+		/*
+		 * En este bucle for utilizamos el contador para imprimir todas
+		 * las posiciones del array
+		 */
+		for (cont = 0; cont < cadena.length; cont++) { 				
+			System.out.print(cadena[cont] + " ");
+		}
+	}
+	public static void ejercicio20(){
+		/*
+								 * Coger el valor de la string introducida por teclado y cambiar las minúsculas
+								 * por las mayúsculas
+								 */
+
+		public static void main(String[] args) {
+
+			int longitud = 0;
+			int i = 0;
+			char letra = 'a';
+			String frase = "";
+			Scanner teclado = new Scanner(System.in);
+
+			/* Fin de las declaraciones de variables */
+
+			System.out.print("Escriba una frase: ");
+			frase = teclado.nextLine();
+			longitud = frase.length();
+
+			for (i = 0; i < longitud; i++) { // Este for se encarga de pasar por cada carácter de la cadena
+
+				if ((frase.charAt(i) >= 'a') && (frase.charAt(i) <= 'z')) { // Si está entre la a y la z minúsculas, hazla mayúscula
+
+					letra = (char) (frase.charAt(i) - ' ');
+					System.out.print(letra);
+
+				} else {
+
+					letra = (char) (frase.charAt(i)); // Sino, imprime la letra tal cual
+					System.out.print(letra);
+
+				}
+			}
+
+		}
+	}
 }
