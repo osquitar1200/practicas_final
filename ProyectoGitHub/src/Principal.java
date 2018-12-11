@@ -383,5 +383,41 @@ public class Principal {
 			System.out.print(cadena[cont] + " ");
 		}
 	}
+	public static void ejercicio20(){
+		/*
+								 * Coger el valor de la string introducida por teclado y cambiar las minúsculas
+								 * por las mayúsculas
+								 */
 
+		public static void main(String[] args) {
+
+			int longitud = 0;
+			int i = 0;
+			char letra = 'a';
+			String frase = "";
+			Scanner teclado = new Scanner(System.in);
+
+			/* Fin de las declaraciones de variables */
+
+			System.out.print("Escriba una frase: ");
+			frase = teclado.nextLine();
+			longitud = frase.length();
+
+			for (i = 0; i < longitud; i++) { // Este for se encarga de pasar por cada carácter de la cadena
+
+				if ((frase.charAt(i) >= 'a') && (frase.charAt(i) <= 'z')) { // Si está entre la a y la z minúsculas, hazla mayúscula
+
+					letra = (char) (frase.charAt(i) - ' ');
+					System.out.print(letra);
+
+				} else {
+
+					letra = (char) (frase.charAt(i)); // Sino, imprime la letra tal cual
+					System.out.print(letra);
+
+				}
+			}
+
+		}
+	}
 }
