@@ -1,4 +1,3 @@
-
 /** 
  * Ejercicio GitHub del tema 3
  * 
@@ -61,6 +60,7 @@ public class Principal {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
+		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
 
@@ -120,16 +120,15 @@ public class Principal {
 			break;
 		case 8:
 			break;
-		case 9: ejercicio09();
+		case 9: 
+			ejercicio09();
 			break;
 		case 10:
 			break;
 		case 11:
 			break;
-		case 11:
-			break;
 		case 12:
-        ejercicio12();
+			ejercicio12();
 			break;
 		case 13:
 			break;
@@ -150,6 +149,7 @@ public class Principal {
 		case 21:
 			break;
 		case 22:
+			ejercicio22();
 			break;
 		case 23:
 			break;
@@ -245,6 +245,38 @@ public class Principal {
 
 	}
 
+	/**
+	 * Ejercicio 22 del Tema 4 - Sergi Cortés
+	 */
+	public static void ejercicio22()
+	{
+		/* Variables */
+		int posiPrimero=0;														// Primera Posición del caracter
+		int posiUltimo=0;														// Ultima Posición del caracter
+		char caBusca=' ';														// Caracter a buscar
+		String cadena="";														// Frase
+		Scanner input=new Scanner (System.in);
+		
+		System.out.println("Introduce un texto (Puede contener espacios)");
+		cadena=input.nextLine();												// Usuario Introduce texto
+		
+		System.out.print("Caracter a buscar: ");
+		caBusca=input.next().charAt(0);											// Usuario Introduce caracter a buscar
+		
+		/* Si el caracter existe continua */
+		if(cadena.indexOf(caBusca)!=-1)
+		{
+			posiPrimero=cadena.indexOf(caBusca);								// Busca el primer "indice" del caracter que le pasemos
+			System.out.println("La primera posicion: "+posiPrimero);
+			
+			posiUltimo=cadena.lastIndexOf(caBusca);								// Busca el ultimo "indice" del caracter que le pasemos
+			System.out.println("La Ultima posición: "+posiUltimo);
+		}
+		
+		/* Si no existe se imprime un mensaje al respecto */
+		else
+			System.out.println("No existe este caracter en la frase.");
+	}
 	
 	public static void ejercicio26()
 	{
