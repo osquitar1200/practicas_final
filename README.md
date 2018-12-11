@@ -4,5 +4,7 @@ Creación de proyecto completo a través de Github
 Ejercicios Tema 4
 
 Profesor: Camilo JC
+Alumno: Jaime Balaguer
 
-Alumno - Ejercicio 22: Sergi Cortés
+Ejercicio 12: Carlos Mota Sánchez
+Ejercicio 22: Sergi Cortés
