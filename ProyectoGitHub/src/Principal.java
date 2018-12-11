@@ -144,6 +144,7 @@ public class Principal {
 			ejercicio16();
 			break;
 		case 17:
+            ejercicio17();
 			break;
 		case 18:
             ejercicio18();
@@ -645,5 +646,26 @@ public class Principal {
 			}
 
 		}
+	}
+}
+ejercicio17();
+import java.util.Scanner;
+public class ejercicio16 {
+	public static void main(String[] args) {
+		boolean pedir=false;
+		Scanner teclado= new Scanner(System.in);
+		do {
+			if(teclado.hasNextInt()==false) {
+			System.out.print("vuelve a introducir el numero: ");
+			teclado.next();
+			}
+			else {
+				if(teclado.nextInt()<=10&&teclado.nextInt()>=0) {
+					pedir=true;
+				}
+			}
+			
+		}
+		while(pedir=false);
 	}
 }
