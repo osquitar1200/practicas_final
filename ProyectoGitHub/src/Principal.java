@@ -59,6 +59,7 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
+        System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
@@ -126,6 +127,7 @@ public class Principal {
 		case 10:
 			break;
 		case 11:
+            ejercicio11();
 			break;
 		case 12:
 			ejercicio12();
@@ -181,6 +183,70 @@ public class Principal {
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+    
+    /*
+    *
+    * Carlos Moles Valdivieso
+    */
+    public static void ejercicio11() {
+        
+		int cont = 0;
+		int suspendido = 0;
+		int aprobado = 0;
+		int notable = 0;
+		int excelente = 0;
+		
+		double [] Notas = {4.5,7.9,2.4,6.7,9.9,4.9,6.5,8,4,3,7,5};
+		
+    /*
+    * El siguiente bucle lee el array con las notas y va añadiendo contadores a la sección que corresponda la nota
+    */
+		for ( cont = 0; cont < Notas.length; cont ++) {
+			if ((Notas[cont] >= 0) && (Notas[cont] < 5)) {
+				suspendido = suspendido +1;
+			}
+			else if ((Notas[cont] >= 5) && (Notas[cont] < 7)) {
+				aprobado = aprobado +1;
+			}
+			else if ((Notas[cont] >= 7) && (Notas[cont] < 9)) {
+				notable = notable +1;
+			}
+			else if ((Notas[cont] >= 9) && (Notas[cont] <= 10)) {
+				excelente = excelente +1;
+			}
+			else System.out.println(Notas[cont]+ " No es una nota valida");
+		}
+    /*
+    * En los siguientes bucles se imprime cada seccion de notas con el numero de personas en cada sección  (añade un * por contador)		
+    */
+		System.out.println("Grafico de barras de las notas \n");
+		System.out.print("Suspendidos: ");
+		
+		for (cont = 0; cont < suspendido; cont ++) {
+			System.out.print("*");
+		}
+		
+		System.out.println();
+		System.out.print("Aprobados: ");
+		
+		for (cont = 0; cont < aprobado; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		System.out.print("Notables: ");
+		
+		for (cont = 0; cont < notable; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		System.out.print("Excelentes: ");
+		
+		for (cont = 0; cont < excelente; cont ++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+
 	public static void ejercicio12() {
 
 		//Vectores
