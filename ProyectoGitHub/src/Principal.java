@@ -165,6 +165,7 @@ public class Principal {
 			ejercicio22();
 			break;
 		case 23:
+            ejercicio23();
 			break;
 		case 24:
 			ejercicio24();
@@ -734,6 +735,25 @@ public class Principal {
 
 		}
 	}
+
+    public static void ejercicio23(){
+        import java.util.Scanner;
+        Scanner teclado = new Scanner(System.in);
+        
+        String premio = "premio";											//Declaro un String llamado premio que contiene la palabra premio.
+        
+        System.out.println("Introduce una palabra, a ver si aciertas!");
+        
+        String palabra = "a";												//Declaramos otro String (palabra) y la igualamos a un valor en este caso "a".
+        
+        while(!premio.equals(palabra)) {									//Este bucle while nos pedirá que intoduzcamos una palabra o valor mientras que el string intoducido por teclado no sea igual al que tenemos nosotros guardados.
+	        
+	        System.out.println("Prueba");
+	        palabra = teclado.nextLine();									//Igualo el String palabra a la siguiente linea introducida por teclado.
+        }
+        System.out.println("Has acertado!");								//Cuando los dos String coincidan, se saldrá del bucle y mostrará este mensaje.
+        teclado.close();
+    }
 }
 ejercicio17();
 import java.util.Scanner;
