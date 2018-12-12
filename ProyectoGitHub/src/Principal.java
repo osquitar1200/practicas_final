@@ -59,10 +59,12 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
-		System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
-        	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+    System.out.println("3.- Ejercicio03 (Samuel Moles)");
+  	System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
+   	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
-        System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
+    System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
@@ -112,6 +114,7 @@ public class Principal {
 		case 2:
 			break;
 		case 3:
+            ejercicio03();
 			break;
 		case 4:
 			break;
@@ -185,11 +188,49 @@ public class Principal {
 		return correcto;
 	}
 
+
+
+  
 	
 
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+
+
+
+      /*
+       *Samuel Moles Bellvert
+       */
+
+
+	public static void ejercicio03() {
+		
+		int suma = 0;
+		int contador = 0;
+		int posicion = 0;
+		
+		int arrayA [] = {10, 20, 30, 40, 50, 60};
+		int arrayB [] = {50, 60, 70, 80, 100};
+		
+		int arrayC [] = new int [5];
+		for(contador = 0; contador < 4; contador++); //Inicializamos el arrayC
+				arrayC[contador] = 0;
+		
+		Scanner teclado = new Scanner (System.in);
+				
+		suma = arrayA[3] + arrayB[4];
+		arrayC[2] = suma + arrayA[1];
+		
+	
+		
+		if (arrayA.length <= 6) //Comprobamos que la longitud del arrayA sea <= 6
+			System.out.println(arrayA[5]);
+		
+		else
+			System.out.println("El número máximo de valores del arrayA es 6");
+	}
+}
     
     /*
     *
@@ -656,6 +697,13 @@ public class Principal {
 								 */
 
 		public static void main(String[] args) {
+
+			int longitud = 0;
+			int i = 0;
+			char letra = 'a';
+			String frase = "";
+			Scanner teclado = new Scanner(System.in);
+
 
 			int longitud = 0;
 			int i = 0;
