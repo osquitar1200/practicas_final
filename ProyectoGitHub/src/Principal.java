@@ -1,3 +1,4 @@
+
 /** 
  * Ejercicio GitHub del tema 3
  * 
@@ -59,13 +60,15 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
+		System.out.println("2.-  Exercici 02 (Hector Lopez)");
+		System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+		System.out.println("12.- Ejercicio12 (Carlos Mota)");
+     System.out.println("13.- Ejercicio13 (Javier Soler Artero)")
+		System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
     System.out.println("3.- Ejercicio03 (Samuel Moles)");
   	System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
    	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 
-		System.out.println("12.- Ejercicio12 (Carlos Mota)");
-        System.out.println("13.- Ejercicio13 (Javier Soler Artero)")
-        System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
@@ -113,6 +116,7 @@ public class Principal {
 		case 1:
 			break;
 		case 2:
+			exercici02();
 			break;
 		case 3:
             ejercicio03();
@@ -128,13 +132,13 @@ public class Principal {
 			break;
 		case 8:
 			break;
-		case 9: 
+		case 9:
 			ejercicio09();
 			break;
 		case 10:
 			break;
 		case 11:
-            ejercicio11();
+			ejercicio11();
 			break;
 		case 12:
 			ejercicio12();
@@ -142,8 +146,8 @@ public class Principal {
 		case 13:
             ejercicio13();
 			break;
-		case 14: 
-        ejercicio14();
+		case 14:
+			ejercicio14();
 			break;
 		case 15:
 			break;
@@ -151,10 +155,10 @@ public class Principal {
 			ejercicio16();
 			break;
 		case 17:
-            ejercicio17();
+			ejercicio17();
 			break;
 		case 18:
-            ejercicio18();
+			ejercicio18();
 			break;
 		case 19:
 			break;
@@ -192,14 +196,60 @@ public class Principal {
 	}
 
 
-
-  
-	
-
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
 
+	public static void exercici02() {
+/*
+     * Exercici 2 del tema 4
+     * Este programa serveix per a comencar a treballar amb arrays i comprobarlos
+     * 
+     * @author Hector Lopez
+     * @version 1
+     * 
+     */
+
+    public class Ejercicio02 {
+	    
+
+		    /*
+		     * Aci es declaren els arrays i a més es inicialitzen els arrays A i B
+		     */
+
+		    int[] arrayA = { 10, 20, 30, 40, 50 };
+		    int[] arrayB = { 50, 60, 70, 80, 100 };
+		    int[] arrayC = new int[5];
+		    int suma = 0;
+
+		    /*
+		     * Aci es realitza una suma del enter de l'arrayA posicio tres i de l'enter de
+		     * l'array B de posicio quatre
+		     */
+		    suma = arrayA[3] + arrayB[4];
+
+		    /*
+		     * Aci s'adjudica a la posicio 1 de l'arrayC el resultat de la suma mes l'enter
+		     * de la posicio cero de l'arrayA
+		     */
+		    arrayC[1] = suma + arrayA[0];
+
+		    System.out.println(suma);
+		    System.out.println(arrayC[1]);
+
+		    System.out.println(arrayC);
+
+		    if (arrayA.length >= 6) { // Si la longitud de l'arrayA es major o igual que 6
+			    System.out.println(arrayA[5]); // S'imprimix el sext element
+		    }
+
+		    else {
+			    System.out.println("El tamaÃ±o del arrayA es " + arrayA.length); // Si no s'imprimix la longitud
+		    }
+
+	    
+
+    }
 
 
       /*
@@ -235,64 +285,67 @@ public class Principal {
 	}
 }
     
-    /*
-    *
-    * Carlos Moles Valdivieso
-    */
-    public static void ejercicio11() {
-        
+
+    
+	
+
+	/*
+	 *
+	 * Carlos Moles Valdivieso
+	 */
+	public static void ejercicio11() {
+
 		int cont = 0;
 		int suspendido = 0;
 		int aprobado = 0;
 		int notable = 0;
 		int excelente = 0;
-		
-		double [] Notas = {4.5,7.9,2.4,6.7,9.9,4.9,6.5,8,4,3,7,5};
-		
-    /*
-    * El siguiente bucle lee el array con las notas y va añadiendo contadores a la sección que corresponda la nota
-    */
-		for ( cont = 0; cont < Notas.length; cont ++) {
+
+		double[] Notas = { 4.5, 7.9, 2.4, 6.7, 9.9, 4.9, 6.5, 8, 4, 3, 7, 5 };
+
+		/*
+		 * El siguiente bucle lee el array con las notas y va añadiendo contadores a la
+		 * sección que corresponda la nota
+		 */
+		for (cont = 0; cont < Notas.length; cont++) {
 			if ((Notas[cont] >= 0) && (Notas[cont] < 5)) {
-				suspendido = suspendido +1;
-			}
-			else if ((Notas[cont] >= 5) && (Notas[cont] < 7)) {
-				aprobado = aprobado +1;
-			}
-			else if ((Notas[cont] >= 7) && (Notas[cont] < 9)) {
-				notable = notable +1;
-			}
-			else if ((Notas[cont] >= 9) && (Notas[cont] <= 10)) {
-				excelente = excelente +1;
-			}
-			else System.out.println(Notas[cont]+ " No es una nota valida");
+				suspendido = suspendido + 1;
+			} else if ((Notas[cont] >= 5) && (Notas[cont] < 7)) {
+				aprobado = aprobado + 1;
+			} else if ((Notas[cont] >= 7) && (Notas[cont] < 9)) {
+				notable = notable + 1;
+			} else if ((Notas[cont] >= 9) && (Notas[cont] <= 10)) {
+				excelente = excelente + 1;
+			} else
+				System.out.println(Notas[cont] + " No es una nota valida");
 		}
-    /*
-    * En los siguientes bucles se imprime cada seccion de notas con el numero de personas en cada sección  (añade un * por contador)		
-    */
+		/*
+		 * En los siguientes bucles se imprime cada seccion de notas con el numero de
+		 * personas en cada sección (añade un * por contador)
+		 */
 		System.out.println("Grafico de barras de las notas \n");
 		System.out.print("Suspendidos: ");
-		
-		for (cont = 0; cont < suspendido; cont ++) {
+
+		for (cont = 0; cont < suspendido; cont++) {
 			System.out.print("*");
 		}
-		
+
 		System.out.println();
 		System.out.print("Aprobados: ");
-		
-		for (cont = 0; cont < aprobado; cont ++) {
+
+		for (cont = 0; cont < aprobado; cont++) {
 			System.out.print("*");
 		}
 		System.out.println();
 		System.out.print("Notables: ");
-		
-		for (cont = 0; cont < notable; cont ++) {
+
+		for (cont = 0; cont < notable; cont++) {
 			System.out.print("*");
 		}
 		System.out.println();
 		System.out.print("Excelentes: ");
-		
-		for (cont = 0; cont < excelente; cont ++) {
+
+		for (cont = 0; cont < excelente; cont++) {
 			System.out.print("*");
 		}
 		System.out.println();
@@ -300,25 +353,28 @@ public class Principal {
 
 	public static void ejercicio12() {
 
-		//Vectores
+		// Vectores
 
-		//Array "original"
+		// Array "original"
 		int[] arrayOriginal = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
 
-		//Aray "copia"
+		// Aray "copia"
 		int[] arrayCopia = new int[10];
 
 		System.out.print("arrayCopia = ");
 
-		// Asignamos valores y los imprimimos (comprobamos que se está realizando correctamente la copia).
+		// Asignamos valores y los imprimimos (comprobamos que se está realizando
+		// correctamente la copia).
 		for (int i = 0; i < arrayCopia.length; i++) {
 
-		    arrayCopia[i] = arrayOriginal[i];
-		    System.out.print(arrayCopia[i] + " ");
+			arrayCopia[i] = arrayOriginal[i];
+			System.out.print(arrayCopia[i] + " ");
 
 		}
 
-    }
+
+	}
+
 
     public static void ejercicio13(){
 
@@ -351,6 +407,7 @@ public class Principal {
 
     }   
 	
+
 	/* Ejercicio 16, Tema 4, Alejandro Rozas */
 	public static void ejercicio16() {
 
@@ -368,6 +425,15 @@ public class Principal {
 			System.out.println("");
 		}
 	}
+
+
+	/*
+	 * Ejercicio18 Tema 4 ---> Juanjo Nadal
+	 */
+	public static void ejercicio18() {
+		// Se inicializa el array con todas las notas de forma estática
+		double[][] aNotas = { { 6.0, 7.2, 2.3, 5.8, 3.4 }, { 7.8, 1.6, 4.6, 9.4, 3.1 }, { 3.6, 1.4, 8.9, 3.5, 6.5 },
+				{ 2.5, 3, 10, 2.4, 8.9 } };
 
 
 	public static void ejercicio06(){
@@ -414,122 +480,105 @@ public class Principal {
                             {7.8, 1.6, 4.6, 9.4, 3.1}, 
                             {3.6, 1.4,  8.9, 3.5, 6.5}, 
                             {2.5, 3, 10, 2.4, 8.9}};
+
 		double[][] aMediaMaxima = new double[4][2];
-		
-		double suma = 0.0;       //Corresponde a la nota media
-		double maxima = 0.0;	 //Corresponde a la nota maxima
-		double nota = 0.0;	
-		
+
+		double suma = 0.0; // Corresponde a la nota media
+		double maxima = 0.0; // Corresponde a la nota maxima
+		double nota = 0.0;
+
 		int fila = 0;
 		int columna = 0;
 		int posicion = 0;
 		int i = 0;
-		
-		//Inicializacion a 0 del array bidimensional aMediaMaxima
-		for(fila = 0; fila < aMediaMaxima.length; fila++)
-		{
-			for(columna = 0; columna < aMediaMaxima[fila].length; columna++)
-			{
+
+		// Inicializacion a 0 del array bidimensional aMediaMaxima
+		for (fila = 0; fila < aMediaMaxima.length; fila++) {
+			for (columna = 0; columna < aMediaMaxima[fila].length; columna++) {
 				aMediaMaxima[fila][columna] = 0.0;
 			}
 		}
-		
-		//Bucles para obtener la nota media y nota maxima
-		for(fila = 0; fila < aNotas.length; fila++)
-		{
-			//Cada vez que se repita el bucle estas variables no contendran valores de previas iteraciones
+
+		// Bucles para obtener la nota media y nota maxima
+		for (fila = 0; fila < aNotas.length; fila++) {
+			// Cada vez que se repita el bucle estas variables no contendran valores de
+			// previas iteraciones
 			maxima = 0;
 			suma = 0;
-			for(columna = 0; columna < aNotas[fila].length; columna++)
-			{
-				//Coloca en la vble maxima la nota máxima de la fila, es decir del alumno 
-				if(aNotas[fila][columna] > maxima)
-				{
+			for (columna = 0; columna < aNotas[fila].length; columna++) {
+				// Coloca en la vble maxima la nota máxima de la fila, es decir del alumno
+				if (aNotas[fila][columna] > maxima) {
 					maxima = aNotas[fila][columna];
 				}
-				
-				//Va sumando la notas de la fila para mas tarde hacer la media
+
+				// Va sumando la notas de la fila para mas tarde hacer la media
 				suma = suma + aNotas[fila][columna];
 			}
-			
-			//Se hace la media del alumno (suma de todas las cifras / cantidad de cifras)
+
+			// Se hace la media del alumno (suma de todas las cifras / cantidad de cifras)
 			suma = suma / aNotas[0].length;
-			
-			//Se añade al array las notas medias y maximas
+
+			// Se añade al array las notas medias y maximas
 			aMediaMaxima[fila][0] = suma;
 			aMediaMaxima[fila][1] = maxima;
 		}
-		
-		//Se imprimen los valores del array
-		for(fila = 0; fila < aMediaMaxima.length; fila++)
-		{
-			for(columna = 0; columna < aMediaMaxima[fila].length; columna++)
-			{
+
+		// Se imprimen los valores del array
+		for (fila = 0; fila < aMediaMaxima.length; fila++) {
+			for (columna = 0; columna < aMediaMaxima[fila].length; columna++) {
 				System.out.println(aMediaMaxima[fila][columna]);
 			}
 			System.out.println(" ");
 		}
-		
+
 		// Bucle para imprimir cual de los alumnos tiene las mejores notas
-		/* 
-		 * En su primera iteracion se comprobaran las notas medias y se selecciona la mayor
-		 * En la segunda iteracion hara lo mismo para la nota maxima
+		/*
+		 * En su primera iteracion se comprobaran las notas medias y se selecciona la
+		 * mayor En la segunda iteracion hara lo mismo para la nota maxima
 		 */
-		for(columna = 0; columna < aMediaMaxima[0].length; columna++)
-		{
-			nota = aMediaMaxima[0][columna];//Con esto el valor de nota simpre sera el primer valor de la columna, ya sea madia o nota maxima
-			for(fila = 0; fila < 4; fila++)
-			{
-				if(nota < aMediaMaxima[fila][columna])
-				{
+		for (columna = 0; columna < aMediaMaxima[0].length; columna++) {
+			nota = aMediaMaxima[0][columna];// Con esto el valor de nota simpre sera el primer valor de la columna, ya
+											// sea madia o nota maxima
+			for (fila = 0; fila < 4; fila++) {
+				if (nota < aMediaMaxima[fila][columna]) {
 					nota = aMediaMaxima[fila][columna];
 					posicion = fila;
 				}
 			}
-			
-			//Primera iteracion corresponde a nota media por lo que columna == 0
-			if(columna == 0)
-			{
+
+			// Primera iteracion corresponde a nota media por lo que columna == 0
+			if (columna == 0) {
 				System.out.print("La mejor nota media es para el alumno ");
-			}
-			else
-			{
+			} else {
 				System.out.print("La mejor nota maxima es para el alumno ");
 			}
-			
-			//Dependiendo de la posicion sera un alumno u otro
-			switch(posicion)
-			{
-				case 0:
-				{
-					System.out.println("Espinete con un: " +nota);
-					break;
-				}
-				case 1:
-				{
-					System.out.println("Don Pinpon con un: " +nota);
-					break;
-				}
-		
-				case 2:
-				{
-					System.out.println("Gustavo con un: " +nota);
-					break;
-				}
-				default:
-				{
-					System.out.println("Triki con un: " +nota);
-					break;
-				}
+
+			// Dependiendo de la posicion sera un alumno u otro
+			switch (posicion) {
+			case 0: {
+				System.out.println("Espinete con un: " + nota);
+				break;
+			}
+			case 1: {
+				System.out.println("Don Pinpon con un: " + nota);
+				break;
+			}
+
+			case 2: {
+				System.out.println("Gustavo con un: " + nota);
+				break;
+			}
+			default: {
+				System.out.println("Triki con un: " + nota);
+				break;
+			}
 			}
 		}
 	}
-}
-    }
 
 
-  
-  	public static void ejercicio09() {
+
+	public static void ejercicio09() {
 
 		int i = 1;
 		int num = 0;
@@ -576,8 +625,7 @@ public class Principal {
 
 	}
 
-
-    public static void ejercicio14() {
+	public static void ejercicio14() {
 
          int [] A = {30,15,2,21,44,8,4,23,60,75};
 		 
@@ -642,7 +690,7 @@ public class Principal {
 		else
 			System.out.println("No existe este caracter en la frase.");
 	}
-	
+
 	public static void ejercicio26()
 	{
 		int contador=0;															/*En estas lineas Iniciamos las variables*/
@@ -673,6 +721,7 @@ public class Principal {
 
 		}
 	}
+
 	public static void ejercicio24(){
 		/*
 		 * declaramos las variables
@@ -724,13 +773,14 @@ public class Principal {
 			System.out.print(cadena[cont] + " ");
 		}
 	}
-	public static void ejercicio20(){
-		/*
-								 * Coger el valor de la string introducida por teclado y cambiar las minúsculas
-								 * por las mayúsculas
-								 */
 
-		public static void main(String[] args) {
+	public static void ejercicio20(){
+	/*
+	 * Coger el valor de la string introducida por teclado y cambiar las minúsculas
+	 * por las mayúsculas
+	 */
+
+	public static void main(String[] args) {
 
 			int longitud = 0;
 			int i = 0;
@@ -767,7 +817,9 @@ public class Principal {
 			}
 
 		}
-	}
+
+ejercicio17();
+
 
     public static void ejercicio23(){
         import java.util.Scanner;
@@ -789,23 +841,23 @@ public class Principal {
     }
 }
 ejercicio17();
+
 import java.util.Scanner;
+
 public class ejercicio16 {
 	public static void main(String[] args) {
-		boolean pedir=false;
-		Scanner teclado= new Scanner(System.in);
+		boolean pedir = false;
+		Scanner teclado = new Scanner(System.in);
 		do {
-			if(teclado.hasNextInt()==false) {
-			System.out.print("vuelve a introducir el numero: ");
-			teclado.next();
-			}
-			else {
-				if(teclado.nextInt()<=10&&teclado.nextInt()>=0) {
-					pedir=true;
+			if (teclado.hasNextInt() == false) {
+				System.out.print("vuelve a introducir el numero: ");
+				teclado.next();
+			} else {
+				if (teclado.nextInt() <= 10 && teclado.nextInt() >= 0) {
+					pedir = true;
 				}
 			}
-			
-		}
-		while(pedir=false);
+
+		} while (pedir = false);
 	}
 }

@@ -7,6 +7,7 @@ Profesor: Camilo JC
 Alumno: Jaime Balaguer
 Alumno: Javier Soler Cantó
 
+Ejercicio02: Hector Lopez 
 Ejercicio03: Samuel Moles
 Ejercicio 06: Víctor Carbonell Colomina
 Ejercicio11: Crlos Moles
