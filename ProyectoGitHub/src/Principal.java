@@ -62,6 +62,7 @@ public class Principal {
 		System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
         	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
+        System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
@@ -136,7 +137,8 @@ public class Principal {
 			break;
 		case 13:
 			break;
-		case 14:
+		case 14: 
+        ejercicio14();
 			break;
 		case 15:
 			break;
@@ -144,8 +146,10 @@ public class Principal {
 			ejercicio16();
 			break;
 		case 17:
+            ejercicio17();
 			break;
 		case 18:
+            ejercicio18();
 			break;
 		case 19:
 			break;
@@ -290,6 +294,7 @@ public class Principal {
 		}
 	}
 
+
 	public static void ejercicio06(){
 		
 		int numValoresLeidos = 0;
@@ -323,6 +328,131 @@ public class Principal {
 		System.out.println("Ya se han leído" + numValoresLeidos + "valores");
 		System.out.println(array[0] + "" + array[1] + "" + array[2] + "" + array[3] + "" + array[4]);
 	}
+
+    /*
+     * Ejercicio18 Tema 4 ---> Juanjo Nadal
+     */
+	public static void ejercicio18()
+    {
+    //Se inicializa el array con todas las notas de forma estática
+		double[][] aNotas = {{6.0, 7.2, 2.3, 5.8, 3.4}, 
+                            {7.8, 1.6, 4.6, 9.4, 3.1}, 
+                            {3.6, 1.4,  8.9, 3.5, 6.5}, 
+                            {2.5, 3, 10, 2.4, 8.9}};
+		double[][] aMediaMaxima = new double[4][2];
+		
+		double suma = 0.0;       //Corresponde a la nota media
+		double maxima = 0.0;	 //Corresponde a la nota maxima
+		double nota = 0.0;	
+		
+		int fila = 0;
+		int columna = 0;
+		int posicion = 0;
+		int i = 0;
+		
+		//Inicializacion a 0 del array bidimensional aMediaMaxima
+		for(fila = 0; fila < aMediaMaxima.length; fila++)
+		{
+			for(columna = 0; columna < aMediaMaxima[fila].length; columna++)
+			{
+				aMediaMaxima[fila][columna] = 0.0;
+			}
+		}
+		
+		//Bucles para obtener la nota media y nota maxima
+		for(fila = 0; fila < aNotas.length; fila++)
+		{
+			//Cada vez que se repita el bucle estas variables no contendran valores de previas iteraciones
+			maxima = 0;
+			suma = 0;
+			for(columna = 0; columna < aNotas[fila].length; columna++)
+			{
+				//Coloca en la vble maxima la nota máxima de la fila, es decir del alumno 
+				if(aNotas[fila][columna] > maxima)
+				{
+					maxima = aNotas[fila][columna];
+				}
+				
+				//Va sumando la notas de la fila para mas tarde hacer la media
+				suma = suma + aNotas[fila][columna];
+			}
+			
+			//Se hace la media del alumno (suma de todas las cifras / cantidad de cifras)
+			suma = suma / aNotas[0].length;
+			
+			//Se añade al array las notas medias y maximas
+			aMediaMaxima[fila][0] = suma;
+			aMediaMaxima[fila][1] = maxima;
+		}
+		
+		//Se imprimen los valores del array
+		for(fila = 0; fila < aMediaMaxima.length; fila++)
+		{
+			for(columna = 0; columna < aMediaMaxima[fila].length; columna++)
+			{
+				System.out.println(aMediaMaxima[fila][columna]);
+			}
+			System.out.println(" ");
+		}
+		
+		// Bucle para imprimir cual de los alumnos tiene las mejores notas
+		/* 
+		 * En su primera iteracion se comprobaran las notas medias y se selecciona la mayor
+		 * En la segunda iteracion hara lo mismo para la nota maxima
+		 */
+		for(columna = 0; columna < aMediaMaxima[0].length; columna++)
+		{
+			nota = aMediaMaxima[0][columna];//Con esto el valor de nota simpre sera el primer valor de la columna, ya sea madia o nota maxima
+			for(fila = 0; fila < 4; fila++)
+			{
+				if(nota < aMediaMaxima[fila][columna])
+				{
+					nota = aMediaMaxima[fila][columna];
+					posicion = fila;
+				}
+			}
+			
+			//Primera iteracion corresponde a nota media por lo que columna == 0
+			if(columna == 0)
+			{
+				System.out.print("La mejor nota media es para el alumno ");
+			}
+			else
+			{
+				System.out.print("La mejor nota maxima es para el alumno ");
+			}
+			
+			//Dependiendo de la posicion sera un alumno u otro
+			switch(posicion)
+			{
+				case 0:
+				{
+					System.out.println("Espinete con un: " +nota);
+					break;
+				}
+				case 1:
+				{
+					System.out.println("Don Pinpon con un: " +nota);
+					break;
+				}
+		
+				case 2:
+				{
+					System.out.println("Gustavo con un: " +nota);
+					break;
+				}
+				default:
+				{
+					System.out.println("Triki con un: " +nota);
+					break;
+				}
+			}
+		}
+	}
+}
+    }
+
+
   
   	public static void ejercicio09() {
 
@@ -370,6 +500,40 @@ public class Principal {
 		System.out.print("media: " + media + "nota mas alta" + notamayor);
 
 	}
+
+
+    public static void ejercicio14() {
+
+         int [] A = {30,15,2,21,44,8,4,23,60,75};
+		 
+		 int i=0, k=0, buscapeque=0, pospeque=0, aux=0;
+		 
+		 for(i=0;i<A.length;i++) { //Bucle que recorre el array hasta el final
+			 
+			 k=A[i];//Guardamos el mínimo
+			 pospeque=i;// y su posición 
+			 
+			 for(buscapeque=i;buscapeque<A.length;buscapeque++) { //Bucle que recorre el array 
+				 
+				 if(k>A[buscapeque]) { //Condición para cambiar
+					 
+					 k=A[buscapeque];
+					 pospeque=buscapeque;
+				 }
+			 }
+			 /**
+			  * Intercambio de variables
+			  */
+			 aux = A[pospeque];
+			 A[pospeque] = A[i];
+			 A[i] = aux;
+		 }
+		 for (i=0;i<A.length;i++) { //Imprimimos el array
+			 
+			 System.out.print(A[i] + " ");
+		 }
+
+    }
 
 	/**
 	 * Ejercicio 22 del Tema 4 - Sergi Cortés
@@ -521,5 +685,26 @@ public class Principal {
 			}
 
 		}
+	}
+}
+ejercicio17();
+import java.util.Scanner;
+public class ejercicio16 {
+	public static void main(String[] args) {
+		boolean pedir=false;
+		Scanner teclado= new Scanner(System.in);
+		do {
+			if(teclado.hasNextInt()==false) {
+			System.out.print("vuelve a introducir el numero: ");
+			teclado.next();
+			}
+			else {
+				if(teclado.nextInt()<=10&&teclado.nextInt()>=0) {
+					pedir=true;
+				}
+			}
+			
+		}
+		while(pedir=false);
 	}
 }

@@ -5,10 +5,12 @@ Ejercicios Tema 4
 
 Profesor: Camilo JC
 Alumno: Jaime Balaguer
+Alumno: Javier Soler Cantó
 
 Ejercicio12: Carlos Mota Sánchez
 Alumno:Sergi Santamaria Sendra
 Ejercicio 16: Alejandro Rozas Martos
+Ejercicio 17: David Gabaldón Pardo
 Ejercicio 22: Sergi Cortés
 Ejercicio 20: Rafael Jorge Carbonell Gisbert
 Ejercicio 06: Víctor Carbonell Colomina
