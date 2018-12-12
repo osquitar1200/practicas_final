@@ -59,7 +59,10 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
-        System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+    System.out.println("3.- Ejercicio03 (Samuel Moles)");
+  	System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
+   	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
         System.out.println("13.- Ejercicio13 (Javier Soler Artero)")
         System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
@@ -112,12 +115,14 @@ public class Principal {
 		case 2:
 			break;
 		case 3:
+            ejercicio03();
 			break;
 		case 4:
 			break;
 		case 5:
 			break;
 		case 6:
+			ejercicio06();
 			break;
 		case 7:
 			break;
@@ -162,6 +167,7 @@ public class Principal {
 			ejercicio22();
 			break;
 		case 23:
+            ejercicio23();
 			break;
 		case 24:
 			ejercicio24();
@@ -185,11 +191,49 @@ public class Principal {
 		return correcto;
 	}
 
+
+
+  
 	
 
 	/*
 	 * A partir de aqui cada alumno realizara su ejercicio del Tema 4
 	 */
+
+
+
+      /*
+       *Samuel Moles Bellvert
+       */
+
+
+	public static void ejercicio03() {
+		
+		int suma = 0;
+		int contador = 0;
+		int posicion = 0;
+		
+		int arrayA [] = {10, 20, 30, 40, 50, 60};
+		int arrayB [] = {50, 60, 70, 80, 100};
+		
+		int arrayC [] = new int [5];
+		for(contador = 0; contador < 4; contador++); //Inicializamos el arrayC
+				arrayC[contador] = 0;
+		
+		Scanner teclado = new Scanner (System.in);
+				
+		suma = arrayA[3] + arrayB[4];
+		arrayC[2] = suma + arrayA[1];
+		
+	
+		
+		if (arrayA.length <= 6) //Comprobamos que la longitud del arrayA sea <= 6
+			System.out.println(arrayA[5]);
+		
+		else
+			System.out.println("El número máximo de valores del arrayA es 6");
+	}
+}
     
     /*
     *
@@ -325,6 +369,41 @@ public class Principal {
 		}
 	}
 
+
+	public static void ejercicio06(){
+		
+		int numValoresLeidos = 0;
+       		int[] array = new int[5];
+
+        	boolean salir=false;
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Escribe" + array.length + "enteros. Puedes hacerlo en disferentes lineas.");
+
+		while (numValoresLeidos < array.length && salir ==false) {
+
+			if (input.hasNextInt()) {
+				int valor = input.nextInt();
+				if (valor ==-1){
+					salir =true;
+				}else{
+					array[numValoresLeidos] =valor;
+					System.out.println("Valor" + numValoresLeidos + "leidos" + valor);
+					numValoresLeidos++;
+				}
+				
+			} else {
+				input.next();
+				System.out.println("Introduce un valor valido");
+			}
+			
+		}
+		input.close();
+		System.out.println("Ya se han leído" + numValoresLeidos + "valores");
+		System.out.println(array[0] + "" + array[1] + "" + array[2] + "" + array[3] + "" + array[4]);
+	}
+
     /*
      * Ejercicio18 Tema 4 ---> Juanjo Nadal
      */
@@ -448,8 +527,10 @@ public class Principal {
 }
     }
 
+
   
-  public static void ejercicio09() {
+  	public static void ejercicio09() {
+
 		int i = 1;
 		int num = 0;
 		int notas = 0;
@@ -657,6 +738,13 @@ public class Principal {
 			String frase = "";
 			Scanner teclado = new Scanner(System.in);
 
+
+			int longitud = 0;
+			int i = 0;
+			char letra = 'a';
+			String frase = "";
+			Scanner teclado = new Scanner(System.in);
+
 			/* Fin de las declaraciones de variables */
 
 			System.out.print("Escriba una frase: ");
@@ -680,6 +768,25 @@ public class Principal {
 
 		}
 	}
+
+    public static void ejercicio23(){
+        import java.util.Scanner;
+        Scanner teclado = new Scanner(System.in);
+        
+        String premio = "premio";											//Declaro un String llamado premio que contiene la palabra premio.
+        
+        System.out.println("Introduce una palabra, a ver si aciertas!");
+        
+        String palabra = "a";												//Declaramos otro String (palabra) y la igualamos a un valor en este caso "a".
+        
+        while(!premio.equals(palabra)) {									//Este bucle while nos pedirá que intoduzcamos una palabra o valor mientras que el string intoducido por teclado no sea igual al que tenemos nosotros guardados.
+	        
+	        System.out.println("Prueba");
+	        palabra = teclado.nextLine();									//Igualo el String palabra a la siguiente linea introducida por teclado.
+        }
+        System.out.println("Has acertado!");								//Cuando los dos String coincidan, se saldrá del bucle y mostrará este mensaje.
+        teclado.close();
+    }
 }
 ejercicio17();
 import java.util.Scanner;
