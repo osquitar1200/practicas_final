@@ -59,7 +59,8 @@ public class Principal {
 	public static void MostrarMenu() {
 		System.out.println("Elige una opcion de las propuestas a continuacion/n/n");
 		System.out.println("0.- Presentacion (Camilo Juan)");
-        System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
+		System.out.println("06.- Ejercicio06 (Víctor Carbonell Colomina)");
+        	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
         System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
@@ -117,6 +118,7 @@ public class Principal {
 		case 5:
 			break;
 		case 6:
+			ejercicio06();
 			break;
 		case 7:
 			break;
@@ -292,6 +294,41 @@ public class Principal {
 		}
 	}
 
+
+	public static void ejercicio06(){
+		
+		int numValoresLeidos = 0;
+       		int[] array = new int[5];
+
+        	boolean salir=false;
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Escribe" + array.length + "enteros. Puedes hacerlo en disferentes lineas.");
+
+		while (numValoresLeidos < array.length && salir ==false) {
+
+			if (input.hasNextInt()) {
+				int valor = input.nextInt();
+				if (valor ==-1){
+					salir =true;
+				}else{
+					array[numValoresLeidos] =valor;
+					System.out.println("Valor" + numValoresLeidos + "leidos" + valor);
+					numValoresLeidos++;
+				}
+				
+			} else {
+				input.next();
+				System.out.println("Introduce un valor valido");
+			}
+			
+		}
+		input.close();
+		System.out.println("Ya se han leído" + numValoresLeidos + "valores");
+		System.out.println(array[0] + "" + array[1] + "" + array[2] + "" + array[3] + "" + array[4]);
+	}
+
     /*
      * Ejercicio18 Tema 4 ---> Juanjo Nadal
      */
@@ -415,8 +452,10 @@ public class Principal {
 }
     }
 
+
   
-  public static void ejercicio09() {
+  	public static void ejercicio09() {
+
 		int i = 1;
 		int num = 0;
 		int notas = 0;
