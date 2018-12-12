@@ -64,7 +64,8 @@ public class Principal {
    	System.out.println("11.- Ejercicio11 (Carlos Moles Valdivieso)");
 
 		System.out.println("12.- Ejercicio12 (Carlos Mota)");
-    System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
+        System.out.println("13.- Ejercicio13 (Javier Soler Artero)")
+        System.out.println("18.- Ejercicio18 (Juanjo Nadal)");
 		System.out.println("22.- Ejercicio 22 (Sergi Cortés)");
 		System.out.println("30.- Salir");
 	}
@@ -139,6 +140,7 @@ public class Principal {
 			ejercicio12();
 			break;
 		case 13:
+            ejercicio13();
 			break;
 		case 14: 
         ejercicio14();
@@ -317,6 +319,37 @@ public class Principal {
 		}
 
     }
+
+    public static void ejercicio13(){
+
+        
+        int Auxiliar = 0;
+	    int[] Array = {1, 8, 4, 2, 5};
+	    
+	    for(int i = 1; i < Array.length; i++) {			//Este bucle es el encargado reservar la variable que se va a comparar con todas las que la preceden
+		    
+		    for(int j = i; j > 0; j--) {				//Aquí se comparará la variable que queremos comparar con el conjunto que la precede
+			    
+			    if (Array[j] < Array[j-1]) {			//En caso de que en la posición del array que esté la variable reservada sea menor que la que la precede
+				    
+				    //INTERCAMBIO DE VARIABLES
+				    Auxiliar = Array[j];				
+				    Array[j] = Array[j-1];
+				    Array[j-1] = Auxiliar;
+				    
+			    }
+			    
+		    }
+		    
+	    }
+	    
+	    for(int k = 0; k < Array.length; k++) {			//Impresión de los valores ordenados
+		    
+		    System.out.println(Array[k]);
+		    
+	    }
+
+    }   
 	
 	/* Ejercicio 16, Tema 4, Alejandro Rozas */
 	public static void ejercicio16() {
